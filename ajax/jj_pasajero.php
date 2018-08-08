@@ -1,0 +1,1 @@
+<input id="aporPasajero" name="aporPasajero" required="required" placeholder="Ejemplo: 3" class="date-picker hasDatepicker" autocomplete="off" type="text"> €

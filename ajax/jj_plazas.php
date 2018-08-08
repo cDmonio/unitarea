@@ -1,0 +1,1 @@
+<input id="nPlazas" name="nPlazas" required="required" placeholder="Ejemplo: 4" class="date-picker hasDatepicker" autocomplete="off" type="text"> Personas. (máx: 4).
