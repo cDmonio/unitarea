@@ -18,17 +18,16 @@ $password_cifrada = password_hash($password, PASSWORD_DEFAULT, array("cost"=>15)
 /*
 el "cost" lo que indica es la fuerza con la que se cifra la password
 a mayor fuerza mas tiempo de carga requiere la página por eso es
-importante buscar un equilibrio
+importante que busques un equilibrio
 */
 
 /*
 compruebo que la conexion es correcta
 y de ser asi hago el insert
 */
-
 if ($conexion == true) {
 	
- //preparo el insert
+ //preparo el insert...
  $insert = $conexion->prepare("INSERT INTO usuarios (nom_completo, email, password, ciudad, poblacion, cod_postal, universidad, fecha_nac, sexo) VALUES (:nom_completo, :email, :password, :ciudad, :poblacion, :cod_postal, :universidad, :fecha_nac, :sexo)");
 
  //asocio los campos del insert a los campos del formulario
@@ -49,9 +48,9 @@ if ($conexion == true) {
  $conexion = null;
 
  //Redirijo a otro archivo php
- Header('Location: index.php');
-  echo "El usuario se ha registrado correctamente!";
+ //Header('Location: index.php');
+  echo "se ha insertado todo correctamente!";
 } else {
- echo "Algo ha salido mal!";
+ echo "Algo ha fallado bro";
 }
 ?>
